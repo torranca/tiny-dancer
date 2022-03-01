@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: tiny-dancer
+  security:
+    oauth2:
+      client:
+        registration:
+          frock:
+            client-id: AlanTesting
+            client-secret: unicorns
+            client-authentication-method: client_secret_basic
+        provider:
+          frock:
+            issuer-uri: https://openam-jpmc-poc.forgeblocks.com:443/am/oauth2/alpha
+logging:
+  level:
+    org.springframework.web.client.RestTemplate: DEBUG
